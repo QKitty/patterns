@@ -10,12 +10,43 @@ import java.util.Iterator;
 import java.util.Set;
 
 /**
- *
+ * This class should be extended to create your own classes that support the
+ * ISubject interface functionality allowing them to act as "subjects" of an
+ * observer object. 
+ * Alternatively if you cannot extend this class but require the functionality
+ * you should compose an instance of this class with your class. Have your class
+ * implement the ISubject interface but delegate all method calls to an
+ * instance of this class.
  * @author Qkitty
  */
 public class SubjectBaseClass implements ISubject {
     
-    protected ISubject observers = new ISubjectImpl();
+    /**
+     * Instance of the basic ISubject implementation. The subjectBaseClass
+     * delegates functionality to this implementation for the methods of the
+     * ISubject interface. This composes the subject base class with the 
+     * provided ISubject implementation class.
+     */
+    protected ISubject observers;
+    
+    /**
+     * Creates a default implementation with the ISubject implementation class
+     * providing support for the ISubject interface.
+     */
+    public SubjectBaseClass(){
+        observers = new ISubjectImpl();
+    }
+    
+    /**
+     * Creates a SubjectBaseClass where the implementation to use for the 
+     * ISubject interface is provided by the user
+     * @param aISubjectImplementation - A class that provides a concrete implementation 
+     * of the ISubject interface. This implementation will be used by the created
+     * SubjectBaseClass object rather than the default implementation.
+     */
+    public SubjectBaseClass(ISubject aISubjectImplementation){
+        observers = aISubjectImplementation;
+    }
 
     @Override
     public boolean registerObserver(IObserver o) {
@@ -74,7 +105,7 @@ public class SubjectBaseClass implements ISubject {
 
     @Override
     public <T> T[] toArray(T[] a) {
-        return this.observers.toArray(a);
+        return (T[])this.observers.toArray(a);
     }
 
     @Override
