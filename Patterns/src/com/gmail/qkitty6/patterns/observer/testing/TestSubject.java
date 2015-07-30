@@ -5,12 +5,12 @@
  */
 package com.gmail.qkitty6.patterns.observer.testing;
 
-import com.gmail.qkitty6.patterns.observer.SubjectBaseClass;
+import com.gmail.qkitty6.patterns.observer.SubjectSetBaseClass;
 
 /**
  *
  * @author Qkitty
  */
-class TestSubject extends SubjectBaseClass {
+class TestSubject extends SubjectSetBaseClass {
     
 }

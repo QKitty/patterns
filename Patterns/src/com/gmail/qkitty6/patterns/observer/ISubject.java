@@ -13,7 +13,7 @@ import java.util.Set;
  * will be the "subject" to be "observed" by another object.
  * @author Qkitty
  */
-public interface ISubject extends Set<IObserver> {
+public interface ISubject {
     
     /**
      * This method registers a new observer with the subject. After this method 

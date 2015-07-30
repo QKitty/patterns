@@ -14,7 +14,7 @@ package com.gmail.qkitty6.patterns.observer;
  * @param <T> - A data type that may be passed to the update method of an observer
  * Useful to pass details of the changes made.
  */
-public class SubjectObserverBaseClass<T> extends SubjectBaseClass implements IObserver<T>{
+public class SubjectObserverBaseClass<T> extends SubjectSetBaseClass implements IObserver<T>{
 
     @Override
     public void update() {

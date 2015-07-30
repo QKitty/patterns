@@ -14,7 +14,7 @@ import java.lang.reflect.InvocationTargetException;
  *
  * @author Roy
  */
-class SubjectWrapper<T> extends SubjectBaseClass implements ISubjectWrapper<T> {
+class SubjectWrapper<T> extends SubjectSetBaseClass implements ISubjectWrapper<T> {
 
     private final T wrappedObject;
 

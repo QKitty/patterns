@@ -14,7 +14,7 @@ import java.lang.reflect.InvocationTargetException;
  * @author Roy
  * @param <T> Any object to be wrapped with support for observing it
  */
-public interface ISubjectWrapper<T> extends ISubject {
+public interface ISubjectWrapper<T> extends ISubjectSet {
 
     /**
      * Accessor to retrieve the base object that has been wrapped to provide
