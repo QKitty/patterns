@@ -5,6 +5,7 @@
  */
 package com.gmail.qkitty6.patterns.observer;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Set;
 
@@ -13,7 +14,7 @@ import java.util.Set;
  * will be the "subject" to be "observed" by another object.
  * @author Qkitty
  */
-public interface ISubject {
+public interface ISubject extends Serializable {
     
     /**
      * This method registers a new observer with the subject. After this method 

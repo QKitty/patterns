@@ -5,6 +5,7 @@
  */
 package com.gmail.qkitty6.patterns.observer;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Set;
 
@@ -14,7 +15,7 @@ import java.util.Set;
  * basic ISubject methods but also supports the Set interface
  * @author Qkitty
  */
-public interface ISubjectSet extends Set<IObserver> {
+public interface ISubjectSet extends Set<IObserver>, Serializable {
     
     /**
      * This method registers a new observer with the subject. After this method 

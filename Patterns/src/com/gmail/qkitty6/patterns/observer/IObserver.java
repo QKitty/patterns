@@ -5,6 +5,8 @@
  */
 package com.gmail.qkitty6.patterns.observer;
 
+import java.io.Serializable;
+
 /**
  * This interface represents the abstract concept of an observer that can
  * 'watch' a subject and receive notification of updates / state changes
@@ -12,7 +14,7 @@ package com.gmail.qkitty6.patterns.observer;
  * @author Qkitty
  * @param <T> Any type of object used to parameterise the call to update
  */
-public interface IObserver <T> {
+public interface IObserver <T> extends Serializable {
     
     /**
      * This method executes when the object receives a notification that the observed
