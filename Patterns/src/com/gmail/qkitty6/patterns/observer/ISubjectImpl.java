@@ -82,12 +82,8 @@ public class ISubjectImpl implements ISubject {
     public Set<IObserver> removeAllObservers() {
         HashSet<IObserver> arlResult = new HashSet<>();
         if (null != this.observers) {
-            observers.stream().map((currObserver) -> {
-                arlResult.add(currObserver);
-                return currObserver;
-            }).forEach((currObserver) -> {
-                observers.remove(currObserver);
-            });
+            arlResult.addAll(this.observers);
+            observers.clear();
             if (0 == this.observers.size()) {
                 this.observers = null;
             }
